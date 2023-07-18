@@ -11,4 +11,4 @@
 - Full Responsive Template
 
 [Open Live Preview 👆](https://hhoobankk.netlify.app/)
-<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script>
+[Opens in new tab](https://hhoobankk.netlify.app/)
