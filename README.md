@@ -10,5 +10,4 @@
 `FEATURS`
 - Full Responsive Template
 
-[Open Live Preview 👆](https://hhoobankk.netlify.app/)
 [Opens in new tab](https://hhoobankk.netlify.app/)
