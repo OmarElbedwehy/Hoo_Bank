@@ -10,4 +10,4 @@
 `FEATURS`
 - Full Responsive Template
 
-<a href="[placeholder.com](https://hhoobankk.netlify.app/)" target="_blank">Open Live Preview 👆</a>
+<a href="https://hhoobankk.netlify.app/" target="_blank">Open Live Preview 👆</a>
