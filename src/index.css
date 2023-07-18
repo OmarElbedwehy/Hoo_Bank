@@ -1,0 +1,617 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #00040F;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #314581;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #455b9e;
+}
+
+@layer components {
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+    * {
+        @apply font-poppins box-border
+    }
+
+    body {
+        @apply bg-[#00040F] text-white;
+    }
+
+    .text-primary {
+        color: #5CE1E6;
+    }
+
+    nav ul a {
+        @apply p-4 text-white/70 hover:text-white transition duration-300 relative
+    }
+
+    nav ul a::after {
+        @apply content-[''] absolute bottom-[5px] left-1/2 -translate-x-1/2 bg-white w-0 h-0.5 transition-all duration-300 rounded-lg
+    }
+
+    nav ul a:hover::after,
+    nav ul a.active::after {
+        @apply w-9/12
+    }
+
+    .hero .discount {
+        background: linear-gradient(135deg, #272727, #11101D);
+    }
+
+    .linear-text {
+        background: linear-gradient(to right, #DEF9FA, #BEF3F5, #9DEDF0, #7DE7EB, #5CE1E6, #33BBCF);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .radial-text {
+        background: radial-gradient(#DEF9FA, #BEF3F5, #9DEDF0, #7DE7EB, #5CE1E6, #33BBCF);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .linear-btn {
+        background: linear-gradient(to bottom, #DEF9FA, #BEF3F5, #9DEDF0, #7DE7EB, #5CE1E6, #33BBCF);
+    }
+
+    .hero-info .info {
+        @apply flex items-center relative
+    }
+
+    .hero-info .info:nth-child(2)::before {
+        @apply content-[''] w-0.5 h-4 bg-white/70 absolute top-1/2 -translate-y-1/2 left-0 rounded-lg
+    }
+
+    .hero-info .info:nth-child(2)::after {
+        @apply content-[''] w-0.5 h-4 bg-white/70 absolute top-1/2 -translate-y-1/2 right-0 rounded-lg
+    }
+
+    .hero-info .info h3 {
+        @apply text-3xl font-semibold mr-4
+    }
+
+    .hero-info .linear-text {
+        @apply text-[13px]
+    }
+    .hero .info div{
+        @apply flex-row items-center
+    }
+    section {
+        @apply w-full h-screen container flex items-center justify-between
+    }
+
+    .business .card {
+        @apply flex items-center gap-5 rounded-xl lg:w-[470px] md:w-full h-[115px] px-5 py-1
+    }
+
+    .business .card h4 {
+        @apply font-semibold mb-1
+    }
+
+    .business .card p {
+        @apply text-sm text-white/70
+    }
+
+    .billing .transaction-card,
+    .status .card {
+        background: linear-gradient(131deg, #515151, #14101D);
+        @apply p-5 rounded-lg
+    }
+
+    .billing .paypal-card {
+        background: linear-gradient(97deg, #515151, #14101D);
+        @apply p-5 rounded-lg
+    }
+
+    .billing .card .transactions {
+        @apply flex flex-col gap-7
+    }
+
+    .billing .card .transactions .transaction {
+        @apply flex items-center justify-between
+    }
+
+    .billing .card .transactions .transaction .side {
+        @apply flex items-center gap-3
+    }
+
+    .billing .card .transactions .transaction:not(:first-child) .ico,
+    .paypal-card .ico {
+        @apply w-[35px] h-[35px] bg-white rounded-full flex items-center justify-center
+    }
+
+    .billing .card .transactions .transaction h4 {
+        @apply font-semibold
+    }
+
+    .billing .card .transactions .transaction p {
+        @apply text-sm
+    }
+
+    .billing .card .transactions .transaction .text p {
+        @apply text-white/70
+    }
+
+    .paypal-card p {
+        @apply text-xs text-white/70
+    }
+
+    .billing .right button {
+        @apply bg-[#000] flex items-center gap-2 p-2 rounded-lg
+    }
+
+    .status .card .months span {
+        @apply text-sm text-white/70
+    }
+    .testimonials .testis .testi .ico{
+        @apply mb-6
+    }
+    .testimonials .testis .testi .ico svg{
+        @apply w-[30px]
+    }
+    .testimonials .testis .testi{
+        @apply px-6 py-8 rounded-lg 
+    }
+    .testimonials .testis .testi:nth-child(2){
+        background: linear-gradient(109deg, #515151, #14101D);
+    }
+    .testimonials .testis .testi .praph{
+        @apply w-[220px] leading-relaxed mb-5
+    }
+
+    .testimonials .testis .testi .author{
+        @apply flex items-center gap-4
+    }
+
+    .testimonials .testis .testi .author .img img{
+        @apply w-[42px]
+    }
+
+    .testimonials .testis .testi .author p{
+        @apply text-sm text-white/70 leading-none
+    }
+
+    .testimonials .btm img{
+        @apply w-[120px]
+    }
+
+    .footer-div{
+        background: linear-gradient(215deg, #515151, #14101D);
+    }
+
+    footer div h4{
+        @apply mb-2
+    }
+
+    footer div ul li{
+        @apply text-white/70 py-1 text-sm
+    }
+
+}
+
+@media (max-width: 1140px) {
+    .status{
+        width: 83%;
+    }
+}
+
+@media (max-width: 1024px){
+    nav{
+        @apply px-9
+    }
+
+    .hero{
+        @apply mb-[10rem]
+    }
+
+    .container{
+        max-width: 870px !important;
+    }
+
+    section{
+        max-width: 870px !important;
+    }
+
+    .hero .hero-graphic img{
+        @apply w-[400px] h-[400px]
+    }
+
+    .hero .hero-graphic .light{
+        @apply w-[530px]
+    }
+
+    .hero-info{
+        @apply w-[90%]
+    }
+
+    .container{
+        max-width: 1000px;
+    }
+    .status{
+        width: 89%;
+    }
+    .status .right .card:nth-child(2){
+        @apply left-[-35px] w-[180px]
+    }
+
+    .status .right .card:nth-child(3){
+        @apply w-[268px] right-[-45px]
+    }
+    .testimonials .testis{
+        @apply w-full
+    }
+
+    footer{
+        @apply !grid-cols-3
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-full-content {
+        @apply flex-col gap-16
+    }
+    .hero{
+        @apply mb-[38rem]
+    }
+
+    .hero-graphic {
+        @apply relative
+    }
+
+    .hero .light{
+        @apply hidden
+    }
+
+    .hero-info{
+        @apply pt-12 !w-[92%]
+    }
+
+    .business{
+        @apply flex-col gap-20 mb-[32rem]
+    }
+
+    .business h1{
+        @apply text-4xl w-[430px] mx-auto 
+    }
+    .business .left p{
+        @apply w-[450px]
+    }
+    .business .left{
+        @apply text-center
+    }
+    .business .right{
+        @apply flex-col items-center
+    }
+
+    .business .right .card{
+        @apply flex-col text-center w-[90%] h-auto py-4
+    }
+
+    .billing{
+        @apply flex-col gap-40 justify-start mb-[15rem]
+    }
+
+    .billing .right{
+        @apply text-center
+    }
+    .billing .right h1{
+        @apply text-4xl w-[465px] mx-auto
+    }
+    .billing .right .praph{
+        @apply w-[450px] mx-auto
+    }
+    .billing .btns{
+        @apply justify-center
+    }
+
+    .status{
+        @apply flex-col gap-40 !mx-auto mb-[15rem]
+    }
+
+    .status .left{
+        @apply text-center
+    }
+
+    .status .left h1,
+    .status .left .praph,
+    .testimonials .top h1,
+    .testimonials .top .praph{
+        @apply mx-auto
+    }
+
+    .status .left .praph{
+        @apply w-[400px]
+    }
+
+    .status .right .card:nth-child(2){
+        @apply !left-[-60px] !w-[200px]
+    }
+
+    .status .right .card:nth-child(3){
+        @apply !w-[300px] !right-[-150px]
+    }
+    .testimonials .top{
+        @apply flex-col text-center
+    }
+    .testimonials .top .praph{
+        @apply w-[390px]
+    }
+    .testimonials .testis{
+        @apply flex-wrap justify-center gap-10
+    }
+    .testimonials .btm{
+        @apply w-[98%]
+    }
+    .testimonials .top p{
+        @apply mt-5
+    }
+    .testimonials{
+        margin-bottom: 17rem;
+    }
+    .footer-div{
+        @apply px-20 text-center flex-col justify-center
+    }
+    .footer-div p{
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 768px){
+    .hero-graphic img{
+        @apply w-[440px] h-[440px]
+    }
+
+    .hero-graphic .light{
+        @apply w-[565px] h-[790px]
+    }
+
+    .billing .right h1{
+        @apply text-3xl w-[350px] mx-auto
+    }
+    .billing .right .praph{
+        @apply text-xs w-[350px] mx-auto
+    }
+
+    .transaction-card .paypal-card,
+    .transaction-card .succes{
+        @apply left-1/2 -translate-x-1/2 
+    }
+
+    .transaction-card .paypal-card{
+        @apply top-[-244px]
+    }
+
+    .transaction-card .succes{
+        @apply top-[300px] w-[85%]
+    }
+
+    .status .right .card:nth-child(2){
+        @apply !left-[-60px] !w-[200px]
+    }
+
+    .status .right .card:nth-child(3){
+        @apply !w-[300px] !right-[-150px]
+    }
+    footer{
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 700px){
+    .container{
+        max-width: 920px;
+    }
+    section{
+        max-width: 900px;
+    }
+    .hero-graphic img{
+        @apply w-[440px] h-[440px]
+    }
+    .hero-graphic .light{
+        @apply w-[565px] h-[790px]
+    }
+    /* .status .right{
+        @apply mr-[3.5rem]
+    } */
+
+    .hero-info {
+        @apply block !w-auto pt-12 
+    }
+
+    .hero-info .info {
+        @apply p-0 w-full block mb-7
+    }
+
+    .hero-info .info::after,
+    .hero-info .info::before {
+        @apply hidden
+    }
+}
+
+@media (max-width: 687px) {
+    .status .left{
+        @apply mb-28
+    }
+    .status .right .card:nth-child(2),
+    .status .right .card:nth-child(3){
+        @apply !left-1/2 -translate-x-1/2
+    }
+
+    .status .right .card:nth-child(2){
+        @apply top-[-53px] 
+    }
+
+    .status .right .card:nth-child(3){
+        @apply top-[50%] 
+    }
+
+    .status .right .card:nth-child(4){
+        @apply bottom-[-110px] 
+    }
+}
+
+@media (max-width: 800px) {
+    nav{
+        @apply px-9
+    }
+    nav .toggle{
+        @apply block
+    }
+
+    nav ul{
+        background: linear-gradient(131deg, #515151, #14101D);
+        @apply absolute right-[7px] flex-col items-center top-[70px] translate-y-[40px] p-2 rounded-lg gap-3 z-10 opacity-0 transition-all duration-300;
+    }
+
+    nav ul a::after{
+        @apply hidden
+    }
+
+    .openNav{
+        @apply transition-all duration-300 flex opacity-100 translate-y-0;
+    }
+
+    .hero {
+        @apply !pl-0 text-center mb-[38rem]
+    }
+
+    .hero-full-content {
+        @apply pt-8
+    }
+    
+    .hero .discount,
+    .hero .praph{
+        margin: 0 auto;
+    }
+    .hero .content h1{
+        @apply text-5xl w-[400px] leading-tight my-11
+    }
+    .hero .praph{
+        @apply w-[400px]
+    }
+    
+    .hero-info .info div{
+        @apply flex-col
+    }
+
+    .hero-info{
+        @apply pt-12 !w-[89%]
+    }
+
+    .hero-info .info h3 {
+        @apply text-3xl mr-0
+    }
+
+    .hero-info .info div{
+        @apply my-3 
+    }
+    .hero-graphic img{
+        @apply w-[400px] h-[400px]
+    }
+    .hero-graphic svg{
+        @apply w-[570px]
+    }
+    .hero .started{
+        @apply hidden
+    }
+    
+    .business h1{
+        @apply text-3xl w-[340px]
+    }
+
+    .business .left p{
+        @apply w-[356px]
+    }
+    .testimonials .btm img{
+        @apply w-[90px]
+    }
+    .status{
+        @apply mb-[30rem]
+    }
+
+    .testimonials .top h1{
+        @apply text-3xl w-[280px]
+    }
+}
+
+@media (max-width: 580px) {
+    footer{
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        place-items: center;
+        text-align: center;
+        gap: 4rem !important;
+    }
+    .testimonials{
+        margin-bottom: 33rem !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero .discount{
+        @apply w-[310px]
+    }
+    .hero .discount p{
+        @apply text-xs
+    }
+    .hero .content h1{
+        @apply text-4xl w-[355px] leading-tight
+    }
+    .hero .content .praph{
+        @apply text-xs !w-[300px]
+    }
+    .hero-graphic img{
+        @apply w-[300px] h-[300px]
+    }
+    .business h1{
+        @apply w-[340px]
+    }
+    .business .left p{
+        @apply text-xs w-[340px]
+    }
+
+    .status .right .card:nth-child(2){
+        @apply top-[-66px]
+    }
+
+    .status .right .card:nth-child(4){
+        @apply bottom-[-120px]
+    }
+
+    .status .left h1{
+        @apply text-3xl w-[340px]
+    }
+
+    .status .left .praph{
+        @apply text-xs w-[310px]
+    }
+    .testimonials .btm img{
+        @apply w-[80px]
+    }
+    .testimonials .top p{
+        @apply text-xs !w-[300px]
+    }
+    .testimonials{
+        margin-bottom: 42rem !important;
+    }
+    .footer-div .text h1{
+        @apply text-3xl w-[270px]
+    }
+    .footer-div .text .praph{
+        @apply text-xs w-[250px]
+    }
+}
