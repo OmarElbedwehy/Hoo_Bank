@@ -10,4 +10,4 @@
 `FEATURS`
 - Full Responsive Template
 
-`Live Preview`: 
+[Open Live Preview 👆](https://hhoobankk.netlify.app/)
